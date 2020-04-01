@@ -11,7 +11,15 @@ export class QuoteauthorComponent implements OnInit {
 @Input() quote: Quote;
 @Output() isVoted = new EventEmitter<boolean>();
 
-
+upVote(voted:boolean){
+  this.isVoted.emit(voted);
+}
+downVote(voted:boolean){
+  this.isVoted.emit(voted);
+  
+}
+quoteDelete(voted:boolean){
+  this.isVoted.emit(voted);
 }
   constructor() { }
 
