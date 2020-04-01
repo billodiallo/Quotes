@@ -5,6 +5,8 @@
 ## Description
 - An application that enables users to add quotes,delete quotes.You can also be able to see already existing and there author and can upvote and downvote quotes.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7
+
+
 ## Technologies Used
 - Angular CLI,js,HTML,Bootstrap,CSS
 ## Run 
