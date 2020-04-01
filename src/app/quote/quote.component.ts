@@ -23,46 +23,46 @@ export class QuoteComponent implements OnInit {
       this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
     }
 
-    
+     
   upVote(index){
-      this.quotes[index].upvote ++;
-    }
-    downVote(index){
-      this.quotes[index].downvote ++;
-    }
-    get topVotes(){
-      return this.quotes.sort((x,y) =>{
-        return <any>new Date (y.upvote)-<any>new Date (x.upvote);
-      });
-    }
-    
-    currentTop(){
-      for(let quote of this.quotes){
+    this.quotes[index].upvote ++;
+  }
+  downVote(index){
+    this.quotes[index].downvote ++;
+  }
+  get topVotes(){
+    return this.quotes.sort((x,y) =>{
+      return <any>new Date (y.upvote)-<any>new Date (x.upvote);
+    });
+  }
+  
+  currentTop(){
+    for(let quote of this.quotes){
 if(this.quotes.indexOf(quote) === 0 && quote.upvote> 0){
 
-  return quote.name
+return quote.name
 }
 }
-    };
-  
-  
-  
-  deleteQuote(isVoted, index){
-    if (isVoted) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+  };
 
-      if (toDelete){
-        this.quotes.splice(index,1)
-      }
+
+
+deleteQuote(isVoted, index){
+  if (isVoted) {
+    let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+
+    if (toDelete){
+      this.quotes.splice(index,1)
     }
   }
- addNewQuote(quote){
-   
-  
-  let quoteLength= this.quotes.length;
-  quote.id = quoteLength+1;
-  quote.datePublished = new Date(quote.datePublished)
-  this.quotes.push(quote)
+}
+addNewQuote(quote){
+ 
+
+let quoteLength= this.quotes.length;
+quote.id = quoteLength+1;
+quote.datePublished = new Date(quote.datePublished)
+this.quotes.push(quote)
 }
 
   constructor() { }
