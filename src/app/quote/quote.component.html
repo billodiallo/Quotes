@@ -1,34 +1,35 @@
 <div class="container">
- <h1 id="h"style="text-align: center;"> Like-minded QUOTES </h1>
- <br>
- <hr>
-
- <div class="row">
- <div class="col-md-6">
-   
-      <div *ngFor="let quote of topVotes;let q=index"> 
-        <div> 
-      {{ quote.name}} 
-      
-        </div>
-        <button (click)="toggleDetails(q)" class="btn btn-outline-success" >Find Quote details</button>
-        <br>
-        <div id="buttons">
-        <button (click)="upVote(q)" style="margin: 12px;"> Upvote:{{quote.upvote}}</button>
-        <button (click)="downVote(q)" class="bg bg-dark" style="color: bisque;">Downvote:{{quote.downvote}}</button>
-        </div>
-<hr>
-  <app-quoteauthor *ngIf="quote.showAuthor" [quote]="quote"(isVoted)='deleteQuote($event,q)'></app-quoteauthor>
-  
-  </div>
-  </div>
+  <h1 id="h"style="text-align: center;"> Like-minded QUOTES </h1>
+  <br>
+  <hr>
+ 
+  <div class="row">
   <div class="col-md-6">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-  </div>
-  </div>
-  <div *ngIf="currentTop()" appHighlight>
-    {{currentTop()|uppercase}}
     
-  </div>
-   <p style="text-align:center;">&copy;Mamadou Billo Diallo,March 31 ,2020</p>
-  </div>
+       <div *ngFor="let quote of topVotes;let q=index"> 
+         <div> 
+       {{ quote.name}} 
+       
+         </div>
+         <button (click)="toggleDetails(q)" class="btn btn-outline-success" >Find Quote details</button>
+         <br>
+         <div id="buttons">
+         <button (click)="upVote(q)" style="margin: 12px;"> Upvote:{{quote.upvote}}</button>
+         <button (click)="downVote(q)" class="bg bg-dark" style="color: bisque;">Downvote:{{quote.downvote}}</button>
+         </div>
+ <hr>
+   <app-quoteauthor *ngIf="quote.showAuthor" [quote]="quote"(isVoted)='deleteQuote($event,q)'></app-quoteauthor>
+   
+   </div>
+   </div>
+   <div class="col-md-6">
+       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+   </div>
+   </div>
+   <div *ngIf="currentTop()" appHighlight>
+     {{currentTop()|uppercase}}
+     
+   </div>
+    <p style="text-align:center;">&copy;Mamadou Billo Diallo,March 31 ,2020</p>
+   </div>
+ 
