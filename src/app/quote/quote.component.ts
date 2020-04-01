@@ -7,6 +7,7 @@ import { Quote } from '../quote';
   templateUrl: './quote.component.html',
   styleUrls: ['./quote.component.css']
 })
+
 export class QuoteComponent implements OnInit {
   quotes:Quote[] =[
     new Quote(1,"Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.","Albert Einstein",new Date(1946,12,30),"Abert story",0,0),
@@ -15,6 +16,7 @@ export class QuoteComponent implements OnInit {
     new Quote(4,"You only live once, but if you do it right, once is enough.","Mae West",new Date(1890,2,17),"Dionysious Kandusi",0,0),
     new Quote (5,"No one can make you feel inferior without your consent"," Eleanor Roosevelt",new Date(1936,10,25),"the sorty ",0,0)
     ];
+
 
 
     toggleDetails(index){
