@@ -8,8 +8,9 @@ import {Quote} from "../quote"
 })
 
 export class DetailsComponent implements OnInit {
-  @Input() quote:Quote
 
+  @Input() quote:Quote
+  
   upvotes=0;
   downvotes=0;
 
