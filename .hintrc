@@ -1,6 +1,0 @@
-{
-    "extend":["development"],
-    "hints": {
-        "typescript-config-strict": "warning"
-    }
-}
